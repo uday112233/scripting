@@ -6,5 +6,5 @@ then
 echo permission denied
 exit 1
 else
-yum install mysql -y
+yum install git -y
 fi
