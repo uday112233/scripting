@@ -7,7 +7,7 @@ echo permission denied
 exit 1
 fi
 yum install mysql -y
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then 
 echo check there is fault
 exit 1
