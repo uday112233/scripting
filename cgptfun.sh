@@ -24,7 +24,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Install MySQL
-yum install mysql -y &>>"$LOGFILE"
+yum install mariadb-server -y &>>"$LOGFILE"
 VALIDATE $? "Installing MySQL"
 
 # Install Postfix
