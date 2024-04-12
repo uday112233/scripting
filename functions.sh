@@ -1,8 +1,8 @@
 #!/bin/bash
 
 DATE=$(date +%F)
-SCRIPT-NAME=$0
-LOGFILE=/tmp/$SCRIPT-NAME-$DATE.log
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 R="\e[31m"
 G="\e[3m"
