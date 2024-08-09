@@ -1,0 +1,8 @@
+ apt-get update && apt-get install -y curl ca-certificates
+    - curl -LO "https://dl.k8s.io/release/v1.26.2/bin/linux/amd64/kubectl"  # Download kubectl
+    - chmod +x ./kubectl
+    - mv ./kubectl /usr/local/bin/kubectl
+    - curl -sSL https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/cli-argocd.yaml | kubectl apply -f - # Install ArgoCD CLI
+    - argocd login <ARGOCD_IP>:<PORT> --username admin --password $ARGOCD_PASSWORD # Log in to ArgoCD
+    - argocd app sync $ARGOCD_APP_NAME # Sync the application
+    - argocd app wait $ARGOCD_APP_NAME # Wait for the application to be deployed
